@@ -8,8 +8,10 @@ $stmt = $db->query("SELECT mturk_requester_id FROM pledge WHERE status = 'publis
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $req_ids = [];
 foreach ($rows as $row) {
-  array_push($req_ids, "\"" . $row['mturk_requester_id'] . "\"");
+  array_push($req_ids, $row['mturk_requester_id']);
 }
-echo implode(",", $req_ids);
+echo json_encode($req_ids);
+
+
 
 ?>
