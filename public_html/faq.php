@@ -36,7 +36,7 @@ include "../db.php";
 
 <p class="subtitle" style="margin-bottom: 0">Frequently Asked Questions</p>
 
-<p>Version 30 August 2021</p>
+<p>Version 21 September 2021</p>
 
 <p>&nbsp;</p>
 
@@ -140,7 +140,27 @@ WagePledge.org. 2021. Crowdsourcing Wage Pledge - FAQ, version 30 August 2021. A
 
 <p>A: Yes. For now, <a href="https://wagepledge.org/api.php" target="_blank">https://wagepledge.org/api.php</a> provides a JSON representation of the same data displayed on the <a href="pledges.php">pledges page</a>.</p>
 
+<p>Additionally, <a href="https://wagepledge.org/api/requester_ids.php" target="_blank">https://wagepledge.org/api/requester_ids.php</a> provides a very simple list of the requester IDs of the requesters with currently active pledges.</p>
+
 <p>If you require some other data, such as data about completed pledges, or if you plan to make many requests to this API endpoint, please contact us at info@wagepledge.org. Please note that at this time the output provided by the API is subject to change without notice.</p>
+
+<br/>
+
+<p><strong>Q: Is there a demonstration user script that adds information about requesters who have active pledges to the Mechanical Turk worker interface?</strong></p>
+
+<p>A: Yes. It is available at the link below:</p>
+
+<blockquote><a href="https://raw.githubusercontent.com/fiveplusone/crowdsourcing-wage-pledge-prototype/main/public_html/userscript/wagepledge-alpha.user.js" target="_blank">Crowdsourcing Wage Pledge Userscript</a></blockquote>
+
+<p>You can install it with <a href="https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/" target="_blank"> Greasemonkey</a> (for Firefox), <a href="https://www.tampermonkey.net/index.php?ext=dhdg&browser=chrome" target="_blank">Tampermonkey</a> (for Chrome), or some other extension for managing user scripts.</p>
+
+<p>This is not a 'production ready' script for high-speed use by workers. It is only intended to as a proof of concept.</p>
+
+<p>The screenshot below shows what a requester with an active pledge looks like in the Mechanical Turk worker interface when using the script.</p>
+
+<p style="text-align: center">
+  <img src="/img/userscript.png" alt="Screenshot of the user script in use on the Mechanical Turk worker interface. There is one row of the HITs table with a blue star. The mouse cursor is hovering over the star. A tooltip is displayed with the text 'This requester has an active Crowdsourcing Wage Pledge'." style="max-width: 100%" />
+</p>
 
 <br/>
 
